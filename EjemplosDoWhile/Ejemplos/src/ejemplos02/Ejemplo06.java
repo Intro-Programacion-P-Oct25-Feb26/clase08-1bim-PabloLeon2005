@@ -34,9 +34,20 @@ public class Ejemplo06 {
         int tabla;
         int operacion;
         int contador = 1;
+        int limite;
+        
         System.out.println("Ingrese la tabla a generar");
-        tabla = entrada.nextInt(); // 2
+        tabla = entrada.nextInt(); // 16
 
+        System.out.println("Ingrese el límite de la tabla");
+        limite = entrada.nextInt(); //4       
+        
+        if (tabla%2!=0 && limite%2!=0){
+            tabla = 10;
+            limite = 20;
+            // 16/0 = 0 (PAR) && 4/0 = 0 (PAR) --> FALSO (Sale del if)
+        }
+        
         do {
             operacion = tabla * contador; // 2*1=2 // 2*2=4
                                    // 2 x 1 = 2
@@ -46,7 +57,7 @@ public class Ejemplo06 {
                     contador, 
                     operacion);
             contador = contador + 1;
-        } while (contador <= 10);
+        } while (contador <= limite);
 
     }
 }
