@@ -42,7 +42,6 @@ public class Ejemplo09 {
 
             System.out.println("Ingrese el nombre del estudiante:");
             nombre = entrada.nextLine();
-
             System.out.println("Ingrese la calificación:");
             nota = entrada.nextInt();
 
@@ -51,14 +50,12 @@ public class Ejemplo09 {
             } else {
                 descripcionNota = "Buena";
             }
-
             cadenaFinal = String.format("%sCalificación %d (%s) del "
                     + "estudiante %s\n",
                     cadenaFinal,
                     nota,
                     descripcionNota,
                     nombre);
-
             // agrego valor al acumulador
             suma = suma + nota;
             // agrego una unidad al contador para luego sacar el promedio
