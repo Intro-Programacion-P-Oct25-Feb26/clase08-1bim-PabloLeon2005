@@ -28,22 +28,23 @@ public class Ejemplo08 {
         int denominador = 1;
         String signo;
         String cadena = "";
-
+        int numero;
+        numero = 1;
         do {
             // para manejar el signo asociado 
-            if (denominador % 2 == 0) {
+            if (denominador % 2 != 0) {
                 signo = "+";
             } else {
                 signo = "-";
             }
             
-            cadena = String.format("%s%s%d/%d ", 
+            cadena = String.format("%s%s%d/%d\n", 
                     cadena,
                     signo,
-                    numerador, 
+                    numero, 
                     denominador);
             denominador = denominador + 1;
-
+            numero = numero + 1;
         } while (denominador <= limite);
 
         System.out.println(cadena);

@@ -34,11 +34,30 @@ public class Ejemplo09 {
         boolean bandera = true;
         int suma = 0;
         int contador_calificaciones = 0;
+        String descripcionNota;
         
         cadenaFinal = "Listado de Notas\n";
         
         do {
+
+            System.out.println("Ingrese el nombre del estudiante:");
+            nombre = entrada.nextLine();            
             
+            System.out.println("Ingrese la calificación:");
+            nota = entrada.nextInt();
+            
+            if (nota >= 5) {
+                descripcionNota = "Muy buena";
+            } else {
+                descripcionNota = "Buena";
+            }
+            
+            cadenaFinal = String.format("%sCalificación %d (%s) del "
+                    + "estudiante %s\n",
+                    cadenaFinal,
+                    nota,
+                    descripcionNota,
+                    nombre);
             
             // agrego valor al acumulador
             suma = suma + nota;
